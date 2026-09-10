@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Análisis Zoosanitario — Centro Municipal Animal de Sevilla</title>
+  <meta name="description" content="Aplicación SPA para organizar, analizar y comparar animales (perdidos, adoptables y adoptados) del Centro Municipal de Protección y Control Animal de Sevilla.">
+  
+  <!-- Google Fonts: Inter & DM Serif Display -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  
+  <!-- CSS Principal -->
+  <link rel="stylesheet" href="index.css">
+  <link rel="icon" type="image/png" href="logo.png">
+  
+  <!-- Chart.js CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.4/dist/chart.umd.min.js" defer></script>
+</head>
+<body>
+  <header class="app-header">
+    <div class="header-inner">
+      <div class="header-logo">
+        <img src="logo.png" alt="Logo Análisis Zoosanitario Sevilla: escudo con silueta de perro y gato, un ojo con corazón y una flecha ascendente" class="header-logo-img" width="52" height="57">
+      </div>
+      <div class="header-title">
+        <h1>Análisis Zoosanitario</h1>
+        <p class="header-subtitle">Centro Municipal de Protección y Control Animal — Sevilla</p>
+      </div>
+      <div class="header-links">
+        <button id="btn-reload-data" class="btn btn--small btn--secondary" title="Vaciar caché local y recargar los datos oficiales/de ejemplo">🔄 Recargar datos</button>
+        <button id="btn-sync-ayto" class="btn btn--primary btn--small" title="Descargar datos en vivo del Ayuntamiento de Sevilla vía REST">🔄 Sincronizar REST en Vivo</button>
+      </div>
+    </div>
+  </header>
+
+  <main class="app-main">
+    <!-- Panel resumen -->
+    <section class="summary-panel" aria-label="Resumen de estadísticas">
+      <div class="stat-card stat-card--perdido">
+        <div class="stat-icon" aria-hidden="true">🔍</div>
+        <div class="stat-number" id="summary-perdidos">0</div>
+        <div class="stat-label">Animales Perdidos</div>
+      </div>
+      <div class="stat-card stat-card--adoptable">
+        <div class="stat-icon" aria-hidden="true">🏠</div>
+        <div class="stat-number" id="summary-adoptables">0</div>
+        <div class="stat-label">En Adopción</div>
+      </div>
+      <div class="stat-card stat-card--adoptado">
+        <div class="stat-icon" aria-hidden="true">💚</div>
+        <div class="stat-number" id="summary-adoptados">0</div>
+        <div class="stat-label">Adoptados</div>
+      </div>
+    </section>
+
+    <!-- Pestañas -->
+    <section class="tabs-container" aria-label="Navegación de secciones">
+      <nav class="tabs-nav" role="tablist">
+        <button class="tab-btn" data-tab="todos" role="tab" aria-selected="false" aria-controls="tab-todos">📋 Todos</button>
+        <button class="tab-btn tab-btn--active" data-tab="perdidos" role="tab" aria-selected="true" aria-controls="tab-perdidos">🔍 Perdidos</button>
+        <button class="tab-btn" data-tab="adoptables" role="tab" aria-selected="false" aria-controls="tab-adoptables">🏠 Adoptables</button>
+        <button class="tab-btn" data-tab="adoptados" role="tab" aria-selected="false" aria-controls="tab-adoptados">✅ Adoptados</button>
+        <button class="tab-btn" data-tab="comparar" role="tab" aria-selected="false" aria-controls="tab-comparar">🔄 Comparar</button>
+        <button class="tab-btn" data-tab="analisis" role="tab" aria-selected="false" aria-controls="tab-analisis">📊 Análisis</button>
+      </nav>
+
+      <!-- Tab: Todos (vista unificada) -->
+      <div class="tab-pane" id="tab-todos" role="tabpanel">
+        <div class="table-toolbar">
+          <div class="search-box">
+            <input type="text" class="search-input" id="search-todos" placeholder="Buscar por nombre, raza, color..." aria-label="Buscar en todos">
+          </div>
+          <div class="toolbar-actions">
+            <button class="btn btn--secondary btn--small" data-action="export" data-estado="todos">📤 Exportar todo</button>
+          </div>
+        </div>
+        <div class="filter-bar" id="filters-todos">
+          <div class="filter-group filter-group--estado">
+            <span class="filter-label">Estado</span>
+            <div class="filter-checkbox-group">
+              <label class="filter-checkbox">
+                <input type="checkbox" class="estado-check" data-tab="todos" value="perdido" checked> 🔍 Perdidos
+              </label>
+              <label class="filter-checkbox">
+                <input type="checkbox" class="estado-check" data-tab="todos" value="adoptable" checked> 🏠 Adoptables
+              </label>
+              <label class="filter-checkbox">
+                <input type="checkbox" class="estado-check" data-tab="todos" value="adoptado" checked> ✅ Adoptados
+              </label>
+            </div>
+          </div>
+          <div class="filter-group">
+            <label class="filter-label" for="filter-especie-todos">Especie</label>
+            <select class="filter-select" id="filter-especie-todos" data-estado="todos" data-filter="especie">
+              <option value="">Todas</option>
+            </select>
+          </div>
+          <div class="filter-group">
+            <label class="filter-label" for="filter-sexo-todos">Sexo</label>
+            <select class="filter-select" id="filter-sexo-todos" data-estado="todos" data-filter="sexo">
+              <option value="">Todos</option>
+              <option value="Macho">Macho</option>
+              <option value="Hembra">Hembra</option>
+              <option value="Desconocido">Desconocido</option>
+            </select>
+          </div>
+          <div class="filter-group">
+            <label class="filter-label" for="filter-chip-todos">Microchip</label>
+            <select class="filter-select" id="filter-chip-todos" data-estado="todos" data-filter="chip">
+              <option value="">Todos</option>
+              <option value="con">Con chip</option>
+              <option value="sin">Sin chip</option>
+            </select>
+          </div>
+          <div class="filter-group filter-group--grow">
+            <span class="filter-count" id="filter-count-todos" aria-live="polite"></span>
+          </div>
+          <button type="button" class="btn btn--secondary btn--small" data-action="clear-filters" data-estado="todos">✕ Limpiar filtros</button>
+        </div>
+        <div class="data-table-container">
+          <table class="data-table">
+            <thead>
+              <tr>
+                <th>Foto</th>
+                <th data-sort="nombre" tabindex="0" role="button" aria-label="Ordenar por Nombre">Nombre ↕</th>
+                <th data-sort="especie" tabindex="0" role="button" aria-label="Ordenar por Especie">Especie ↕</th>
+                <th data-sort="raza" tabindex="0" role="button" aria-label="Ordenar por Raza">Raza ↕</th>
+                <th data-sort="sexo" tabindex="0" role="button" aria-label="Ordenar por Sexo">Sexo ↕</th>
+                <th data-sort="color" tabindex="0" role="button" aria-label="Ordenar por Color">Color ↕</th>
+                <th data-sort="chip" tabindex="0" role="button" aria-label="Ordenar por Microchip">Microchip ↕</th>
+                <th data-sort="fecha" tabindex="0" role="button" aria-label="Ordenar por Fecha">Fecha ↕</th>
+                <th data-sort="estado" tabindex="0" role="button" aria-label="Ordenar por Estado">Estado ↕</th>
+              </tr>
+            </thead>
+            <tbody id="table-todos"></tbody>
+          </table>
+        </div>
+      </div>
+
+
+      <!-- Tab: Perdidos -->
+      <div class="tab-pane tab-pane--active" id="tab-perdidos" role="tabpanel">
+        <div class="table-toolbar">
+          <div class="search-box">
+            <input type="text" class="search-input" id="search-perdidos" placeholder="Buscar por nombre, raza, color..." aria-label="Buscar en perdidos">
+          </div>
+          <div class="toolbar-actions">
+            <button class="btn btn--secondary btn--small" data-action="export" data-estado="perdido">📤 Exportar</button>
+          </div>
+        </div>
+                <div class="filter-bar" id="filters-perdidos">
+          <div class="filter-group">
+            <label class="filter-label" for="filter-especie-perdidos">Especie</label>
+            <select class="filter-select" id="filter-especie-perdidos" data-estado="perdidos" data-filter="especie">
+              <option value="">Todas</option>
+            </select>
+          </div>
+          <div class="filter-group">
+            <label class="filter-label" for="filter-sexo-perdidos">Sexo</label>
+            <select class="filter-select" id="filter-sexo-perdidos" data-estado="perdidos" data-filter="sexo">
+              <option value="">Todos</option>
+              <option value="Macho">Macho</option>
+              <option value="Hembra">Hembra</option>
+              <option value="Desconocido">Desconocido</option>
+            </select>
+          </div>
+          <div class="filter-group">
+            <label class="filter-label" for="filter-chip-perdidos">Microchip</label>
+            <select class="filter-select" id="filter-chip-perdidos" data-estado="perdidos" data-filter="chip">
+              <option value="">Todos</option>
+              <option value="con">Con chip</option>
+              <option value="sin">Sin chip</option>
+            </select>
+          </div>
+          <div class="filter-group filter-group--grow">
+            <span class="filter-count" id="filter-count-perdidos" aria-live="polite"></span>
+          </div>
+          <button type="button" class="btn btn--secondary btn--small" data-action="clear-filters" data-estado="perdidos">✕ Limpiar filtros</button>
+        </div>
+        <div class="data-table-container">
+          <table class="data-table">
+            <thead>
+              <tr>
+                <th>Foto</th>
+                <th data-sort="nombre" tabindex="0" role="button" aria-label="Ordenar por Nombre">Nombre ↕</th>
+                <th data-sort="especie" tabindex="0" role="button" aria-label="Ordenar por Especie">Especie ↕</th>
+                <th data-sort="raza" tabindex="0" role="button" aria-label="Ordenar por Raza">Raza ↕</th>
+                <th data-sort="sexo" tabindex="0" role="button" aria-label="Ordenar por Sexo">Sexo ↕</th>
+                <th data-sort="color" tabindex="0" role="button" aria-label="Ordenar por Color">Color ↕</th>
+                <th data-sort="chip" tabindex="0" role="button" aria-label="Ordenar por Microchip">Microchip ↕</th>
+                <th data-sort="fecha" tabindex="0" role="button" aria-label="Ordenar por Fecha">Fecha ↕</th>
+              </tr>
+            </thead>
+            <tbody id="table-perdidos"></tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- Tab: Adoptables -->
+      <div class="tab-pane" id="tab-adoptables" role="tabpanel">
+        <div class="table-toolbar">
+          <div class="search-box">
+            <input type="text" class="search-input" id="search-adoptables" placeholder="Buscar por nombre, raza, color..." aria-label="Buscar en adoptables">
+          </div>
+          <div class="toolbar-actions">
+            <button class="btn btn--secondary btn--small" data-action="export" data-estado="adoptable">📤 Exportar</button>
+          </div>
+        </div>
+                <div class="filter-bar" id="filters-adoptables">
+          <div class="filter-group">
+            <label class="filter-label" for="filter-especie-adoptables">Especie</label>
+            <select class="filter-select" id="filter-especie-adoptables" data-estado="adoptables" data-filter="especie">
+              <option value="">Todas</option>
+            </select>
+          </div>
+          <div class="filter-group">
+            <label class="filter-label" for="filter-sexo-adoptables">Sexo</label>
+            <select class="filter-select" id="filter-sexo-adoptables" data-estado="adoptables" data-filter="sexo">
+              <option value="">Todos</option>
+              <option value="Macho">Macho</option>
+              <option value="Hembra">Hembra</option>
+              <option value="Desconocido">Desconocido</option>
+            </select>
+          </div>
+          <div class="filter-group">
+            <label class="filter-label" for="filter-chip-adoptables">Microchip</label>
+            <select class="filter-select" id="filter-chip-adoptables" data-estado="adoptables" data-filter="chip">
+              <option value="">Todos</option>
+              <option value="con">Con chip</option>
+              <option value="sin">Sin chip</option>
+            </select>
+          </div>
+          <div class="filter-group filter-group--grow">
+            <span class="filter-count" id="filter-count-adoptables" aria-live="polite"></span>
+          </div>
+          <button type="button" class="btn btn--secondary btn--small" data-action="clear-filters" data-estado="adoptables">✕ Limpiar filtros</button>
+        </div>
+        <div class="data-table-container">
+          <table class="data-table">
+            <thead>
+              <tr>
+                <th>Foto</th>
+                <th data-sort="nombre" tabindex="0" role="button" aria-label="Ordenar por Nombre">Nombre ↕</th>
+                <th data-sort="especie" tabindex="0" role="button" aria-label="Ordenar por Especie">Especie ↕</th>
+                <th data-sort="raza" tabindex="0" role="button" aria-label="Ordenar por Raza">Raza ↕</th>
+                <th data-sort="sexo" tabindex="0" role="button" aria-label="Ordenar por Sexo">Sexo ↕</th>
+                <th data-sort="color" tabindex="0" role="button" aria-label="Ordenar por Color">Color ↕</th>
+                <th data-sort="chip" tabindex="0" role="button" aria-label="Ordenar por Microchip">Microchip ↕</th>
+                <th data-sort="fecha" tabindex="0" role="button" aria-label="Ordenar por Fecha">Fecha ↕</th>
+              </tr>
+            </thead>
+            <tbody id="table-adoptables"></tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- Tab: Adoptados -->
+      <div class="tab-pane" id="tab-adoptados" role="tabpanel">
+        <div class="table-toolbar">
+          <div class="search-box">
+            <input type="text" class="search-input" id="search-adoptados" placeholder="Buscar por nombre, raza, color..." aria-label="Buscar en adoptados">
+          </div>
+          <div class="toolbar-actions">
+            <button class="btn btn--secondary btn--small" data-action="export" data-estado="adoptado">📤 Exportar</button>
+          </div>
+        </div>
+                <div class="filter-bar" id="filters-adoptados">
+          <div class="filter-group">
+            <label class="filter-label" for="filter-especie-adoptados">Especie</label>
+            <select class="filter-select" id="filter-especie-adoptados" data-estado="adoptados" data-filter="especie">
+              <option value="">Todas</option>
+            </select>
+          </div>
+          <div class="filter-group">
+            <label class="filter-label" for="filter-sexo-adoptados">Sexo</label>
+            <select class="filter-select" id="filter-sexo-adoptados" data-estado="adoptados" data-filter="sexo">
+              <option value="">Todos</option>
+              <option value="Macho">Macho</option>
+              <option value="Hembra">Hembra</option>
+              <option value="Desconocido">Desconocido</option>
+            </select>
+          </div>
+          <div class="filter-group">
+            <label class="filter-label" for="filter-chip-adoptados">Microchip</label>
+            <select class="filter-select" id="filter-chip-adoptados" data-estado="adoptados" data-filter="chip">
+              <option value="">Todos</option>
+              <option value="con">Con chip</option>
+              <option value="sin">Sin chip</option>
+            </select>
+          </div>
+          <div class="filter-group filter-group--grow">
+            <span class="filter-count" id="filter-count-adoptados" aria-live="polite"></span>
+          </div>
+          <button type="button" class="btn btn--secondary btn--small" data-action="clear-filters" data-estado="adoptados">✕ Limpiar filtros</button>
+        </div>
+        <div class="data-table-container">
+          <table class="data-table">
+            <thead>
+              <tr>
+                <th>Foto</th>
+                <th data-sort="nombre" tabindex="0" role="button" aria-label="Ordenar por Nombre">Nombre ↕</th>
+                <th data-sort="especie" tabindex="0" role="button" aria-label="Ordenar por Especie">Especie ↕</th>
+                <th data-sort="raza" tabindex="0" role="button" aria-label="Ordenar por Raza">Raza ↕</th>
+                <th data-sort="sexo" tabindex="0" role="button" aria-label="Ordenar por Sexo">Sexo ↕</th>
+                <th data-sort="color" tabindex="0" role="button" aria-label="Ordenar por Color">Color ↕</th>
+                <th data-sort="chip" tabindex="0" role="button" aria-label="Ordenar por Microchip">Microchip ↕</th>
+                <th data-sort="fecha" tabindex="0" role="button" aria-label="Ordenar por Fecha">Fecha ↕</th>
+              </tr>
+            </thead>
+            <tbody id="table-adoptados"></tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- Tab: Comparar y Trazabilidad -->
+      <div class="tab-pane" id="tab-comparar" role="tabpanel">
+        <div class="comparison-panel">
+          <div style="display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 1rem; margin-bottom: 1.5rem;">
+            <div>
+              <h2 class="section-title">Trazabilidad de Transiciones y Coincidencias</h2>
+              <p class="section-description">Identifica cuándo un animal que entró como <strong>Encontrado / Perdido</strong> pasa al estado <strong>Adoptable</strong> (o Adoptado) tras cumplir el periodo de custodia municipal.</p>
+            </div>
+            <div style="display: flex; gap: 0.5rem; flex-wrap: wrap;">
+              <button class="btn btn--secondary btn--small" id="btn-filter-custody">⏰ Encontrados con plazo cumplido (>20 días)</button>
+            </div>
+          </div>
+
+          <div id="comparison-results" class="comparison-results" aria-live="polite">
+            <div class="empty-state">
+              <p>Cargando animales con plazo de custodia cumplido…</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Tab: Análisis -->
+      <div class="tab-pane" id="tab-analisis" role="tabpanel">
+        <h2 class="section-title">Análisis y Estadísticas</h2>
+        <div class="charts-grid">
+          <div class="chart-card">
+            <h3 class="chart-title">Distribución por Especie</h3>
+            <div class="chart-canvas-container">
+              <canvas id="chart-species" aria-label="Gráfico de distribución por especie" role="img"></canvas>
+            </div>
+          </div>
+          <div class="chart-card">
+            <h3 class="chart-title">Distribución por Sexo</h3>
+            <div class="chart-canvas-container">
+              <canvas id="chart-sex" aria-label="Gráfico de distribución por sexo" role="img"></canvas>
+            </div>
+          </div>
+          <div class="chart-card">
+            <h3 class="chart-title">Animales por Estado</h3>
+            <div class="chart-canvas-container">
+              <canvas id="chart-status" aria-label="Gráfico de animales por estado" role="img"></canvas>
+            </div>
+          </div>
+          <div class="chart-card">
+            <h3 class="chart-title">Ingresos por Mes</h3>
+            <div class="chart-canvas-container">
+              <canvas id="chart-timeline" aria-label="Gráfico de ingresos por mes" role="img"></canvas>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Modal: Agregar/Editar Animal -->
+  <div class="modal-overlay" id="animal-modal" aria-modal="true" role="dialog" aria-labelledby="modal-title">
+    <div class="modal">
+      <div class="modal-header">
+        <h2 id="modal-title">Nuevo Animal</h2>
+        <button class="close-btn" data-close="animal-modal" aria-label="Cerrar modal">&times;</button>
+      </div>
+      <form id="animal-form">
+        <div class="modal-body">
+          <div class="form-grid">
+            <div class="form-group">
+              <label class="form-label" for="form-nombre">Nombre *</label>
+              <input type="text" class="form-input" id="form-nombre" required placeholder="Nombre del animal">
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="form-especie">Especie *</label>
+              <select class="form-input" id="form-especie" required>
+                <option value="">Seleccionar...</option>
+                <option value="Perro">Perro</option>
+                <option value="Gato">Gato</option>
+                <option value="Otro">Otro</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="form-raza">Raza</label>
+              <input type="text" class="form-input" id="form-raza" placeholder="Ej: Mestizo, Podenco...">
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="form-sexo">Sexo</label>
+              <select class="form-input" id="form-sexo">
+                <option value="Desconocido">Desconocido</option>
+                <option value="Macho">Macho</option>
+                <option value="Hembra">Hembra</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="form-color">Color</label>
+              <input type="text" class="form-input" id="form-color" placeholder="Ej: Marrón, Negro/Blanco...">
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="form-chip">Microchip</label>
+              <input type="text" class="form-input" id="form-chip" placeholder="Número de microchip">
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="form-fecha">Fecha de ingreso</label>
+              <input type="date" class="form-input" id="form-fecha">
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="form-foto">URL de foto</label>
+              <input type="url" class="form-input" id="form-foto" placeholder="https://...">
+            </div>
+            <div class="form-group" style="grid-column: 1 / -1;">
+              <label class="form-label" for="form-observaciones">Observaciones</label>
+              <textarea class="form-input" id="form-observaciones" rows="3" placeholder="Notas adicionales..."></textarea>
+            </div>
+            <!-- Campos ocultos -->
+            <input type="hidden" id="form-estado" value="perdido">
+            <input type="hidden" id="form-id" value="">
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn--secondary" data-close="animal-modal">Cancelar</button>
+          <button type="submit" class="btn btn--primary">Guardar</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- Modal: Importar Datos -->
+  <div class="modal-overlay" id="import-modal" aria-modal="true" role="dialog" aria-labelledby="import-title">
+    <div class="modal">
+      <div class="modal-header">
+        <h2 id="import-title">Importar Datos</h2>
+        <button class="close-btn" data-close="import-modal" aria-label="Cerrar modal">&times;</button>
+      </div>
+      <form id="import-form">
+        <div class="modal-body">
+          <div class="form-group">
+            <label class="form-label" for="import-format">Formato</label>
+            <select class="form-input" id="import-format">
+              <option value="csv">CSV (separado por comas o punto y coma)</option>
+              <option value="json">JSON (array de objetos)</option>
+              <option value="texto">Texto libre (nombre - especie - raza - sexo - color)</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="import-estado">Importar como estado</label>
+            <select class="form-input" id="import-estado">
+              <option value="perdido">Perdidos</option>
+              <option value="adoptable">Adoptables</option>
+              <option value="adoptado">Adoptados</option>
+            </select>
+          </div>
+          <div class="form-group" style="background: var(--color-bg); padding: 0.85rem; border-radius: var(--radius-sm); border: 1px dashed var(--color-border); margin-bottom: 1rem;">
+            <label class="form-label" style="margin-bottom: 0.5rem; font-weight: 600;">Opciones directas de archivo:</label>
+            <div style="display: flex; gap: 0.5rem; flex-wrap: wrap;">
+              <button type="button" class="btn btn--secondary btn--small" id="btn-load-ayto-json">📥 Cargar datos del Ayuntamiento (datos_ayuntamiento.json)</button>
+              <button type="button" class="btn btn--secondary btn--small" id="btn-select-file">📁 Seleccionar archivo desde tu PC</button>
+              <input type="file" id="file-input-upload" accept=".json,.csv,.txt" style="display: none;">
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="import-textarea">O pega el contenido directamente:</label>
+            <textarea class="form-input import-area" id="import-textarea" rows="7" placeholder="Pega aquí el contenido JSON, CSV o texto..."></textarea>
+          </div>
+          <div class="form-group">
+            <label class="form-label">Vista previa</label>
+            <div id="import-preview" class="import-preview">
+              <p class="text-center" style="color: var(--color-text-secondary);">Pega datos arriba o selecciona un archivo para ver la vista previa</p>
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn--secondary" data-close="import-modal">Cancelar</button>
+          <button type="submit" class="btn btn--primary">Importar</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- Modal: Visor de Foto Ampliada (Lightbox) -->
+  <div class="modal-overlay" id="photo-modal" aria-modal="true" role="dialog">
+    <div class="modal" style="max-width: 600px; text-align: center;">
+      <div class="modal-header">
+        <h2 id="photo-modal-title">Foto del Animal</h2>
+        <button class="close-btn" data-close="photo-modal" aria-label="Cerrar modal">&times;</button>
+      </div>
+      <div class="modal-body" style="padding: 1.5rem;">
+        <img id="photo-modal-img" src="" alt="Animal" style="max-width: 100%; max-height: 400px; object-fit: contain; border-radius: var(--radius-md); box-shadow: var(--shadow-md);">
+        <p id="photo-modal-caption" style="margin-top: 1rem; color: var(--color-text-secondary); font-size: 0.9rem;"></p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Context menu para cambiar estado -->
+  <div class="context-menu hidden" id="status-menu" role="menu">
+    <button class="context-menu-item" data-new-estado="perdido" role="menuitem">🔍 Mover a Perdidos</button>
+    <button class="context-menu-item" data-new-estado="adoptable" role="menuitem">🏠 Mover a Adoptables</button>
+    <button class="context-menu-item" data-new-estado="adoptado" role="menuitem">✅ Mover a Adoptados</button>
+  </div>
+
+  <footer class="app-footer">
+    <p>Análisis Zoosanitario — Datos del <a href="https://www.sevilla.org/servicios/centro-municipal-animal" target="_blank" rel="noopener">Centro Municipal de Protección y Control Animal de Sevilla</a></p>
+    <p class="footer-note">
+      Los datos se almacenan localmente en tu navegador. 
+      <button class="btn-link" id="btn-load-ayto-direct">🔄 Cargar 204 animales oficiales de Sevilla</button>
+    </p>
+  </footer>
+
+  <script src="datos_sevilla.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
