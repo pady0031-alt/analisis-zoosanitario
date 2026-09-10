@@ -490,8 +490,13 @@ img {
     align-items: stretch;
   }
   .filter-group,
-  .filter-group--grow {
+  .filter-group--grow,
+  .filter-group--estado {
     min-width: 0;
+    /* En flex-direction:column, flex-basis pasa a controlar la ALTURA
+       (era un ancho pensado para el layout en fila); sin este reset,
+       cada filtro queda con 140-320px de alto vacío. */
+    flex-basis: auto;
   }
   .filter-bar .btn {
     width: 100%;
