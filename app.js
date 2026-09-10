@@ -745,10 +745,6 @@ class ZoosanitarioApp {
     const btnSyncAyto = document.getElementById('btn-sync-ayto');
     if (btnSyncAyto) btnSyncAyto.addEventListener('click', () => this.syncWithAyuntamiento());
 
-    // Botón cargar 204 animales oficiales directos (footer y modal)
-    const btnLoadAytoDirect = document.getElementById('btn-load-ayto-direct');
-    if (btnLoadAytoDirect) btnLoadAytoDirect.addEventListener('click', () => this.loadAyuntamientoOficial());
-
     const btnLoadAytoJson = document.getElementById('btn-load-ayto-json');
     if (btnLoadAytoJson) btnLoadAytoJson.addEventListener('click', () => {
       this.loadAyuntamientoOficial();
