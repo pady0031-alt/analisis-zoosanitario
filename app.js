@@ -726,6 +726,11 @@ class ZoosanitarioApp {
       });
     });
 
+    // Botón "✕" de cerrar (animal-modal, import-modal, photo-modal)
+    document.querySelectorAll('.close-btn[data-close]').forEach(btn => {
+      btn.addEventListener('click', () => this.closeModals());
+    });
+
     // Botones genéricos de abrir modal
     const btnAddPerdido = document.getElementById('btn-add-perdido');
     if (btnAddPerdido) btnAddPerdido.addEventListener('click', () => this.openAnimalModal('perdido'));
