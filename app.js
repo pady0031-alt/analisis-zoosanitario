@@ -49,10 +49,10 @@ class ZoosanitarioApp {
     this.animals = [];
     this.currentTab = 'perdidos';
     this.sortState = {
-      perdidos: { column: null, direction: null },
-      adoptables: { column: null, direction: null },
-      adoptados: { column: null, direction: null },
-      todos: { column: null, direction: null }
+      perdidos: { column: 'fecha', direction: 'desc' },
+      adoptables: { column: 'fecha', direction: 'desc' },
+      adoptados: { column: 'fecha', direction: 'desc' },
+      todos: { column: 'fecha', direction: 'desc' }
     };
     this.charts = {
       species: null,
@@ -69,7 +69,16 @@ class ZoosanitarioApp {
     this.setupEventListeners();
     this.updateSummary();
     this.populateFilterOptions();
+    this.markInitialSortIndicators();
     this.renderTable('perdidos');
+  }
+
+  // Marca visualmente la columna "Fecha" como orden activo (↓ más reciente
+  // primero) en las 4 tablas, ya que es el criterio por defecto al cargar.
+  markInitialSortIndicators() {
+    document.querySelectorAll('th[data-sort="fecha"]').forEach(th => {
+      th.classList.add('sorted-desc');
+    });
   }
 
   // --- 1. Gestión de datos (DataStore) ---
@@ -176,7 +185,7 @@ class ZoosanitarioApp {
           this.saveAnimals();
           this.renderCurrentTab();
           if (this.currentTab === 'analisis') this.renderCharts();
-          alert(`¡Datos cargados correctamente!\nSe han cargado ${animales.length} animales oficiales del Ayuntamiento de Sevilla.`);
+          alert(`Se han cargado ${animales.length} animales desde datos_ayuntamiento.json.\n\n⚠️ Esto es una copia guardada, no en vivo: puede no reflejar altas/bajas muy recientes en sevilla.org. Para datos realmente actualizados, ejecuta en tu terminal:\npython3 servidor.py`);
           return;
         }
       }
@@ -187,7 +196,7 @@ class ZoosanitarioApp {
         this.saveAnimals();
         this.renderCurrentTab();
         if (this.currentTab === 'analisis') this.renderCharts();
-        alert(`Se han cargado ${this.animals.length} animales del registro oficial.\n\nPara sincronización en vivo cada segundo, puedes ejecutar en tu terminal:\npython3 servidor.py`);
+        alert(`Se han cargado ${this.animals.length} animales desde la copia incrustada en la app (datos_sevilla.js).\n\n⚠️ Es la copia más antigua de las 3 fuentes disponibles — puede no reflejar altas/bajas recientes. Para sincronizar con los datos en vivo del Ayuntamiento, ejecuta en tu terminal:\npython3 servidor.py\ny abre después http://localhost:8080`);
         return;
       }
 
