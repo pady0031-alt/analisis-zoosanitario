@@ -1,0 +1,39 @@
+name: Actualizar datos del Ayuntamiento
+
+# Se ejecuta sola cada 6 horas, y también se puede lanzar a mano
+# desde la pestaña "Actions" del repositorio en GitHub.
+on:
+  schedule:
+    - cron: '0 */6 * * *'
+  workflow_dispatch: {}
+
+# Necesario para que el robot pueda guardar (commitear) el archivo actualizado
+permissions:
+  contents: write
+
+jobs:
+  actualizar:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Clonar el repositorio
+        uses: actions/checkout@v4
+
+      - name: Configurar Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Descargar los datos actuales del Ayuntamiento de Sevilla
+        run: python3 descargar_datos.py
+
+      - name: Guardar el archivo si hay cambios
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add datos_ayuntamiento.json
+          if git diff --staged --quiet; then
+            echo "Sin cambios: los datos siguen igual que la última vez."
+          else
+            git commit -m "Actualización automática de datos ($(date -u +'%Y-%m-%d %H:%M UTC'))"
+            git push
+          fi
