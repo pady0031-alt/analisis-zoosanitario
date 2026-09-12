@@ -1,33 +1,5 @@
 [
   {
-    "id": "sevilla_2026_695_perdido",
-    "referencia": "2026/695",
-    "nombre": "Animal 2026/695",
-    "especie": "Perro",
-    "raza": "Mestizo",
-    "sexo": "Macho",
-    "color": "",
-    "chip": "",
-    "fecha": "2026-09-02",
-    "observaciones": "",
-    "fotoUrl": "https://www.sevilla.org/ConsultasWeb/Docs/52c1fdc27460bd5d25c62cd2b931e40c_min.png",
-    "estado": "perdido"
-  },
-  {
-    "id": "sevilla_2026_682_perdido",
-    "referencia": "2026/682",
-    "nombre": "Ref: 2026/682",
-    "especie": "Gato",
-    "raza": "Comun",
-    "sexo": "Desconocido",
-    "color": "Negro",
-    "chip": "",
-    "fecha": "2026-09-02",
-    "observaciones": "GATO NEGRO PEQUEÑO",
-    "fotoUrl": "https://www.sevilla.org/ConsultasWeb/Docs/032c23569447e427b4ee8a29e1175194_min.png",
-    "estado": "perdido"
-  },
-  {
     "id": "sevilla_2026_683_perdido",
     "referencia": "2026/683",
     "nombre": "Ref: 2026/683",
@@ -826,20 +798,6 @@
     "estado": "adoptable"
   },
   {
-    "id": "sevilla_2025_3161_adoptable",
-    "referencia": "2025/3161",
-    "nombre": "Animal 2025/3161",
-    "especie": "Perro",
-    "raza": "Mestizo",
-    "sexo": "Macho",
-    "color": "",
-    "chip": "",
-    "fecha": "2025-10-22",
-    "observaciones": "",
-    "fotoUrl": "https://www.sevilla.org/ConsultasWeb/Docs/3318e509312eeb11e4ef431e513c377b_min.png",
-    "estado": "adoptable"
-  },
-  {
     "id": "sevilla_2025_3209_adoptable",
     "referencia": "2025/3209",
     "nombre": "Ref: 2025/3209",
@@ -952,9 +910,9 @@
     "estado": "adoptable"
   },
   {
-    "id": "sevilla_2026_684_adoptable",
-    "referencia": "2026/684",
-    "nombre": "Animal 2026/684",
+    "id": "sevilla_2026_688_adoptable",
+    "referencia": "2026/688",
+    "nombre": "Animal 2026/688",
     "especie": "Perro",
     "raza": "Pastor Belga Malinois",
     "sexo": "Desconocido",
@@ -962,21 +920,7 @@
     "chip": "",
     "fecha": "2026-09-07",
     "observaciones": "",
-    "fotoUrl": "https://www.sevilla.org/ConsultasWeb/Docs/91415e1d3ca0715494a5549d6df179a2_min.png",
-    "estado": "adoptable"
-  },
-  {
-    "id": "sevilla_2026_685_adoptable",
-    "referencia": "2026/685",
-    "nombre": "Animal 2026/685",
-    "especie": "Perro",
-    "raza": "Pastor Belga Malinois",
-    "sexo": "Desconocido",
-    "color": "",
-    "chip": "",
-    "fecha": "2026-09-07",
-    "observaciones": "",
-    "fotoUrl": "https://www.sevilla.org/ConsultasWeb/Docs/06271206b22a999d8a3eb57776a71eb4_min.png",
+    "fotoUrl": "https://www.sevilla.org/ConsultasWeb/Docs/e0252dbb5c145c11fc2a711b15a8cacd_min.png",
     "estado": "adoptable"
   },
   {
@@ -994,9 +938,9 @@
     "estado": "adoptable"
   },
   {
-    "id": "sevilla_2026_688_adoptable",
-    "referencia": "2026/688",
-    "nombre": "Animal 2026/688",
+    "id": "sevilla_2026_685_adoptable",
+    "referencia": "2026/685",
+    "nombre": "Animal 2026/685",
     "especie": "Perro",
     "raza": "Pastor Belga Malinois",
     "sexo": "Desconocido",
@@ -1004,21 +948,7 @@
     "chip": "",
     "fecha": "2026-09-07",
     "observaciones": "",
-    "fotoUrl": "https://www.sevilla.org/ConsultasWeb/Docs/e0252dbb5c145c11fc2a711b15a8cacd_min.png",
-    "estado": "adoptable"
-  },
-  {
-    "id": "sevilla_2026_687_adoptable",
-    "referencia": "2026/687",
-    "nombre": "Animal 2026/687",
-    "especie": "Perro",
-    "raza": "Pastor Belga Malinois",
-    "sexo": "Desconocido",
-    "color": "",
-    "chip": "",
-    "fecha": "2026-09-07",
-    "observaciones": "",
-    "fotoUrl": "https://www.sevilla.org/ConsultasWeb/Docs/417f0dc5907b322d6557be27ccef7c7a_min.png",
+    "fotoUrl": "https://www.sevilla.org/ConsultasWeb/Docs/06271206b22a999d8a3eb57776a71eb4_min.png",
     "estado": "adoptable"
   },
   {
@@ -1036,20 +966,6 @@
     "estado": "adoptable"
   },
   {
-    "id": "sevilla_2026_686_adoptable",
-    "referencia": "2026/686",
-    "nombre": "Animal 2026/686",
-    "especie": "Perro",
-    "raza": "Pastor Belga Malinois",
-    "sexo": "Desconocido",
-    "color": "",
-    "chip": "",
-    "fecha": "2026-09-07",
-    "observaciones": "",
-    "fotoUrl": "https://www.sevilla.org/ConsultasWeb/Docs/e73c63e67957e2b08f34c2466e9e35e6_min.png",
-    "estado": "adoptable"
-  },
-  {
     "id": "sevilla_2026_694_adoptable",
     "referencia": "2026/694",
     "nombre": "Ref: 2026/694",
@@ -1062,6 +978,20 @@
     "observaciones": "COLOR BLANCO Y CANELA",
     "fotoUrl": "https://www.sevilla.org/ConsultasWeb/Docs/55437a8783a0974a4f36623bdd1befa5_min.png",
     "estado": "adoptable"
+  },
+  {
+    "id": "sevilla_2026_695_adoptado",
+    "referencia": "2026/695",
+    "nombre": "Animal 2026/695",
+    "especie": "Perro",
+    "raza": "Mestizo",
+    "sexo": "Macho",
+    "color": "",
+    "chip": "",
+    "fecha": "2026-09-11",
+    "observaciones": "",
+    "fotoUrl": "https://www.sevilla.org/ConsultasWeb/Docs/52c1fdc27460bd5d25c62cd2b931e40c_min.png",
+    "estado": "adoptado"
   },
   {
     "id": "sevilla_2026_669_adoptado",
@@ -1089,6 +1019,20 @@
     "fecha": "2026-09-09",
     "observaciones": "PERRO MACHO3",
     "fotoUrl": "https://www.sevilla.org/ConsultasWeb/Docs/4b3ac4ebc1f7a752250f88e938726c91_min.png",
+    "estado": "adoptado"
+  },
+  {
+    "id": "sevilla_2026_671_adoptado",
+    "referencia": "2026/671",
+    "nombre": "Ref: 2026/671",
+    "especie": "Gato",
+    "raza": "Comun",
+    "sexo": "Hembra",
+    "color": "Negro",
+    "chip": "",
+    "fecha": "2026-09-07",
+    "observaciones": "GATO HEMBRA NEGRO",
+    "fotoUrl": "https://www.sevilla.org/ConsultasWeb/Docs/9eb79407615876b40e94061bd4a90672_min.png",
     "estado": "adoptado"
   },
   {
@@ -1120,34 +1064,6 @@
     "estado": "adoptado"
   },
   {
-    "id": "sevilla_2026_671_adoptado",
-    "referencia": "2026/671",
-    "nombre": "Ref: 2026/671",
-    "especie": "Gato",
-    "raza": "Comun",
-    "sexo": "Hembra",
-    "color": "Negro",
-    "chip": "",
-    "fecha": "2026-09-07",
-    "observaciones": "GATO HEMBRA NEGRO",
-    "fotoUrl": "https://www.sevilla.org/ConsultasWeb/Docs/9eb79407615876b40e94061bd4a90672_min.png",
-    "estado": "adoptado"
-  },
-  {
-    "id": "sevilla_2026_530_adoptado",
-    "referencia": "2026/530",
-    "nombre": "Ref: 2026/530",
-    "especie": "Gato",
-    "raza": "Gato Cachorro",
-    "sexo": "Macho",
-    "color": "Blanco",
-    "chip": "",
-    "fecha": "2026-09-04",
-    "observaciones": "GATO MACHO ATIGRADO Y BLANCO",
-    "fotoUrl": "https://www.sevilla.org/ConsultasWeb/Docs/8e45269f07d60e140503f720671e657f_min.png",
-    "estado": "adoptado"
-  },
-  {
     "id": "sevilla_2026_636_adoptado",
     "referencia": "2026/636",
     "nombre": "Ref: 2026/636",
@@ -1173,6 +1089,20 @@
     "fecha": "2026-09-04",
     "observaciones": "GATO HEMBRA ATIGRADA Y BLANCA",
     "fotoUrl": "https://www.sevilla.org/ConsultasWeb/Docs/752aaa9ba308a68ea65338b3a5f7e2cc_min.png",
+    "estado": "adoptado"
+  },
+  {
+    "id": "sevilla_2026_530_adoptado",
+    "referencia": "2026/530",
+    "nombre": "Ref: 2026/530",
+    "especie": "Gato",
+    "raza": "Gato Cachorro",
+    "sexo": "Macho",
+    "color": "Blanco",
+    "chip": "",
+    "fecha": "2026-09-04",
+    "observaciones": "GATO MACHO ATIGRADO Y BLANCO",
+    "fotoUrl": "https://www.sevilla.org/ConsultasWeb/Docs/8e45269f07d60e140503f720671e657f_min.png",
     "estado": "adoptado"
   },
   {
@@ -1204,17 +1134,17 @@
     "estado": "adoptado"
   },
   {
-    "id": "sevilla_2026_577_adoptado",
-    "referencia": "2026/577",
-    "nombre": "Ref: 2026/577",
+    "id": "sevilla_2026_619_adoptado",
+    "referencia": "2026/619",
+    "nombre": "Ref: 2026/619",
     "especie": "Gato",
-    "raza": "Siames",
+    "raza": "Comun",
     "sexo": "Macho",
-    "color": "",
+    "color": "Negro",
     "chip": "",
     "fecha": "2026-09-02",
-    "observaciones": "GATO MACHO SIAMES TABBY",
-    "fotoUrl": "https://www.sevilla.org/ConsultasWeb/Docs/c64a653b903b06ef2d362b08118afbbf_min.png",
+    "observaciones": "GATO MACHO NEGRO",
+    "fotoUrl": "https://www.sevilla.org/ConsultasWeb/Docs/8730db54cee15226ee8de11bc48aee33_min.png",
     "estado": "adoptado"
   },
   {
@@ -1232,17 +1162,17 @@
     "estado": "adoptado"
   },
   {
-    "id": "sevilla_2026_619_adoptado",
-    "referencia": "2026/619",
-    "nombre": "Ref: 2026/619",
+    "id": "sevilla_2026_577_adoptado",
+    "referencia": "2026/577",
+    "nombre": "Ref: 2026/577",
     "especie": "Gato",
-    "raza": "Comun",
+    "raza": "Siames",
     "sexo": "Macho",
-    "color": "Negro",
+    "color": "",
     "chip": "",
     "fecha": "2026-09-02",
-    "observaciones": "GATO MACHO NEGRO",
-    "fotoUrl": "https://www.sevilla.org/ConsultasWeb/Docs/8730db54cee15226ee8de11bc48aee33_min.png",
+    "observaciones": "GATO MACHO SIAMES TABBY",
+    "fotoUrl": "https://www.sevilla.org/ConsultasWeb/Docs/c64a653b903b06ef2d362b08118afbbf_min.png",
     "estado": "adoptado"
   },
   {
@@ -2366,20 +2296,6 @@
     "estado": "adoptado"
   },
   {
-    "id": "sevilla_2026_406_adoptado",
-    "referencia": "2026/406",
-    "nombre": "Ref: 2026/406",
-    "especie": "Perro",
-    "raza": "Border Collie",
-    "sexo": "Macho",
-    "color": "Negro",
-    "chip": "",
-    "fecha": "2026-06-08",
-    "observaciones": "PERRO MACHO CACHORRO NEGRO",
-    "fotoUrl": "https://www.sevilla.org/ConsultasWeb/Docs/8f3aa1e6561b855f3d16e5bb769c14a1_min.png",
-    "estado": "adoptado"
-  },
-  {
     "id": "sevilla_2026_405_adoptado",
     "referencia": "2026/405",
     "nombre": "Ref: 2026/405",
@@ -2391,6 +2307,20 @@
     "fecha": "2026-06-08",
     "observaciones": "PERRO MACHO CACHORRO BLANCO Y NEGRO",
     "fotoUrl": "https://www.sevilla.org/ConsultasWeb/Docs/b69a0f6b27ba3e7ded4e32e9c6c16f19_min.png",
+    "estado": "adoptado"
+  },
+  {
+    "id": "sevilla_2026_406_adoptado",
+    "referencia": "2026/406",
+    "nombre": "Ref: 2026/406",
+    "especie": "Perro",
+    "raza": "Border Collie",
+    "sexo": "Macho",
+    "color": "Negro",
+    "chip": "",
+    "fecha": "2026-06-08",
+    "observaciones": "PERRO MACHO CACHORRO NEGRO",
+    "fotoUrl": "https://www.sevilla.org/ConsultasWeb/Docs/8f3aa1e6561b855f3d16e5bb769c14a1_min.png",
     "estado": "adoptado"
   },
   {
@@ -2422,20 +2352,6 @@
     "estado": "adoptado"
   },
   {
-    "id": "sevilla_2026_402_adoptado",
-    "referencia": "2026/402",
-    "nombre": "Ref: 2026/402",
-    "especie": "Perro",
-    "raza": "Mestizo",
-    "sexo": "Macho",
-    "color": "",
-    "chip": "",
-    "fecha": "2026-06-03",
-    "observaciones": "PERRO MACHO MESTIZO",
-    "fotoUrl": "https://www.sevilla.org/ConsultasWeb/Docs/e980e1d2467607804d0841e099568122_min.png",
-    "estado": "adoptado"
-  },
-  {
     "id": "sevilla_2026_410_adoptado",
     "referencia": "2026/410",
     "nombre": "Ref: 2026/410",
@@ -2447,6 +2363,20 @@
     "fecha": "2026-06-03",
     "observaciones": "PERRO MESTIZO",
     "fotoUrl": "https://www.sevilla.org/ConsultasWeb/Docs/ea1d0253497bb048cb9651f78357e224_min.png",
+    "estado": "adoptado"
+  },
+  {
+    "id": "sevilla_2026_402_adoptado",
+    "referencia": "2026/402",
+    "nombre": "Ref: 2026/402",
+    "especie": "Perro",
+    "raza": "Mestizo",
+    "sexo": "Macho",
+    "color": "",
+    "chip": "",
+    "fecha": "2026-06-03",
+    "observaciones": "PERRO MACHO MESTIZO",
+    "fotoUrl": "https://www.sevilla.org/ConsultasWeb/Docs/e980e1d2467607804d0841e099568122_min.png",
     "estado": "adoptado"
   },
   {
@@ -2478,20 +2408,6 @@
     "estado": "adoptado"
   },
   {
-    "id": "sevilla_2026_277_adoptado",
-    "referencia": "2026/277",
-    "nombre": "Ref: 2026/277",
-    "especie": "Perro",
-    "raza": "Bodeguero",
-    "sexo": "Macho",
-    "color": "",
-    "chip": "",
-    "fecha": "2026-05-29",
-    "observaciones": "PERRO MACHO CACHORRO MANCHA NEGRA EN UN OJO",
-    "fotoUrl": "https://www.sevilla.org/ConsultasWeb/Docs/7d430f3f2ef6eb9072b52a46b261b4d0_min.png",
-    "estado": "adoptado"
-  },
-  {
     "id": "sevilla_2026_278_adoptado",
     "referencia": "2026/278",
     "nombre": "Ref: 2026/278",
@@ -2517,6 +2433,20 @@
     "fecha": "2026-05-29",
     "observaciones": "PERRO MACHO CACHORRO",
     "fotoUrl": "https://www.sevilla.org/ConsultasWeb/Docs/7c0f2ce453e96516d25e480bf5d183e0_min.png",
+    "estado": "adoptado"
+  },
+  {
+    "id": "sevilla_2026_277_adoptado",
+    "referencia": "2026/277",
+    "nombre": "Ref: 2026/277",
+    "especie": "Perro",
+    "raza": "Bodeguero",
+    "sexo": "Macho",
+    "color": "",
+    "chip": "",
+    "fecha": "2026-05-29",
+    "observaciones": "PERRO MACHO CACHORRO MANCHA NEGRA EN UN OJO",
+    "fotoUrl": "https://www.sevilla.org/ConsultasWeb/Docs/7d430f3f2ef6eb9072b52a46b261b4d0_min.png",
     "estado": "adoptado"
   },
   {
@@ -2562,6 +2492,20 @@
     "estado": "adoptado"
   },
   {
+    "id": "sevilla_2025_3581_adoptado",
+    "referencia": "2025/3581",
+    "nombre": "Ref: 2025/3581",
+    "especie": "Perro",
+    "raza": "Pastor Belga Malinois",
+    "sexo": "Macho",
+    "color": "",
+    "chip": "",
+    "fecha": "2026-05-12",
+    "observaciones": "EQUIPO DE RESCATE ANIMAL DEL AYUNTAMIENTO AUXILIA ANIMAL PERDIDO/ABANDONADO. SIN CHIP. MUY MUY BUENO Y TRANQUILO",
+    "fotoUrl": "https://www.sevilla.org/ConsultasWeb/Docs/041e20f8accd7ea887f641af6d6536fa_min.png",
+    "estado": "adoptado"
+  },
+  {
     "id": "sevilla_2026_218_adoptado",
     "referencia": "2026/218",
     "nombre": "Ref: 2026/218",
@@ -2587,20 +2531,6 @@
     "fecha": "2026-05-12",
     "observaciones": "GATO HEMBRA DE COLOR NARANJA",
     "fotoUrl": "https://www.sevilla.org/ConsultasWeb/Docs/1ce06320c5fbe2c6fdb5753dc94b9f11_min.png",
-    "estado": "adoptado"
-  },
-  {
-    "id": "sevilla_2025_3581_adoptado",
-    "referencia": "2025/3581",
-    "nombre": "Ref: 2025/3581",
-    "especie": "Perro",
-    "raza": "Pastor Belga Malinois",
-    "sexo": "Macho",
-    "color": "",
-    "chip": "",
-    "fecha": "2026-05-12",
-    "observaciones": "EQUIPO DE RESCATE ANIMAL DEL AYUNTAMIENTO AUXILIA ANIMAL PERDIDO/ABANDONADO. SIN CHIP. MUY MUY BUENO Y TRANQUILO",
-    "fotoUrl": "https://www.sevilla.org/ConsultasWeb/Docs/041e20f8accd7ea887f641af6d6536fa_min.png",
     "estado": "adoptado"
   },
   {
@@ -2730,20 +2660,6 @@
     "estado": "adoptado"
   },
   {
-    "id": "sevilla_2026_168_adoptado",
-    "referencia": "2026/168",
-    "nombre": "Ref: 2026/168",
-    "especie": "Gato",
-    "raza": "Comun",
-    "sexo": "Hembra",
-    "color": "",
-    "chip": "",
-    "fecha": "2026-04-03",
-    "observaciones": "GATO HEMBRA CON 2 CACHORROS",
-    "fotoUrl": "https://www.sevilla.org/ConsultasWeb/Docs/230e98766b89936aacc6bd9fc8f2dae5_min.png",
-    "estado": "adoptado"
-  },
-  {
     "id": "sevilla_2026_166_adoptado",
     "referencia": "2026/166",
     "nombre": "Ref: 2026/166",
@@ -2772,6 +2688,20 @@
     "estado": "adoptado"
   },
   {
+    "id": "sevilla_2026_168_adoptado",
+    "referencia": "2026/168",
+    "nombre": "Ref: 2026/168",
+    "especie": "Gato",
+    "raza": "Comun",
+    "sexo": "Hembra",
+    "color": "",
+    "chip": "",
+    "fecha": "2026-04-03",
+    "observaciones": "GATO HEMBRA CON 2 CACHORROS",
+    "fotoUrl": "https://www.sevilla.org/ConsultasWeb/Docs/230e98766b89936aacc6bd9fc8f2dae5_min.png",
+    "estado": "adoptado"
+  },
+  {
     "id": "sevilla_2026_105_adoptado",
     "referencia": "2026/105",
     "nombre": "Animal 2026/105",
@@ -2783,34 +2713,6 @@
     "fecha": "2026-04-02",
     "observaciones": "",
     "fotoUrl": "https://www.sevilla.org/ConsultasWeb/Docs/a6d5e7220468aa29084a32d33c2da571_min.png",
-    "estado": "adoptado"
-  },
-  {
-    "id": "sevilla_2026_96_adoptado",
-    "referencia": "2026/96",
-    "nombre": "Animal 2026/96",
-    "especie": "Perro",
-    "raza": "Mestizo",
-    "sexo": "Hembra",
-    "color": "",
-    "chip": "",
-    "fecha": "2026-04-02",
-    "observaciones": "",
-    "fotoUrl": "https://www.sevilla.org/ConsultasWeb/Docs/c935fadc40e8da8b0323a8d579d8807c_min.png",
-    "estado": "adoptado"
-  },
-  {
-    "id": "sevilla_2026_67_adoptado",
-    "referencia": "2026/67",
-    "nombre": "Animal 2026/67",
-    "especie": "Perro",
-    "raza": "Cruzado",
-    "sexo": "Hembra",
-    "color": "",
-    "chip": "",
-    "fecha": "2026-04-02",
-    "observaciones": "",
-    "fotoUrl": "https://www.sevilla.org/ConsultasWeb/Docs/6d03a20735fe244efed2e25319165677_min.png",
     "estado": "adoptado"
   },
   {
@@ -2828,17 +2730,31 @@
     "estado": "adoptado"
   },
   {
-    "id": "sevilla_2026_167_adoptado",
-    "referencia": "2026/167",
-    "nombre": "Ref: 2026/167",
+    "id": "sevilla_2026_67_adoptado",
+    "referencia": "2026/67",
+    "nombre": "Animal 2026/67",
     "especie": "Perro",
-    "raza": "Pinscher",
-    "sexo": "Macho",
-    "color": "Negro",
+    "raza": "Cruzado",
+    "sexo": "Hembra",
+    "color": "",
     "chip": "",
-    "fecha": "2026-04-01",
-    "observaciones": "PERRO MACHO PINSCHER NEGRO",
-    "fotoUrl": "https://www.sevilla.org/ConsultasWeb/Docs/06d92a6031852d8d4d946ef468dfd288_min.png",
+    "fecha": "2026-04-02",
+    "observaciones": "",
+    "fotoUrl": "https://www.sevilla.org/ConsultasWeb/Docs/6d03a20735fe244efed2e25319165677_min.png",
+    "estado": "adoptado"
+  },
+  {
+    "id": "sevilla_2026_96_adoptado",
+    "referencia": "2026/96",
+    "nombre": "Animal 2026/96",
+    "especie": "Perro",
+    "raza": "Mestizo",
+    "sexo": "Hembra",
+    "color": "",
+    "chip": "",
+    "fecha": "2026-04-02",
+    "observaciones": "",
+    "fotoUrl": "https://www.sevilla.org/ConsultasWeb/Docs/c935fadc40e8da8b0323a8d579d8807c_min.png",
     "estado": "adoptado"
   },
   {
@@ -2856,6 +2772,20 @@
     "estado": "adoptado"
   },
   {
+    "id": "sevilla_2026_167_adoptado",
+    "referencia": "2026/167",
+    "nombre": "Ref: 2026/167",
+    "especie": "Perro",
+    "raza": "Pinscher",
+    "sexo": "Macho",
+    "color": "Negro",
+    "chip": "",
+    "fecha": "2026-04-01",
+    "observaciones": "PERRO MACHO PINSCHER NEGRO",
+    "fotoUrl": "https://www.sevilla.org/ConsultasWeb/Docs/06d92a6031852d8d4d946ef468dfd288_min.png",
+    "estado": "adoptado"
+  },
+  {
     "id": "sevilla_2026_169_adoptado",
     "referencia": "2026/169",
     "nombre": "Ref: 2026/169",
@@ -2870,17 +2800,17 @@
     "estado": "adoptado"
   },
   {
-    "id": "sevilla_2026_127_adoptado",
-    "referencia": "2026/127",
-    "nombre": "Ref: 2026/127",
-    "especie": "Gato",
-    "raza": "Comun",
-    "sexo": "Macho",
+    "id": "sevilla_2025_3555_adoptado",
+    "referencia": "2025/3555",
+    "nombre": "Animal 2025/3555",
+    "especie": "Perro",
+    "raza": "Cruzado",
+    "sexo": "Hembra",
     "color": "",
     "chip": "",
     "fecha": "2026-03-19",
-    "observaciones": "GATO MACHO",
-    "fotoUrl": "https://www.sevilla.org/ConsultasWeb/Docs/a73e8f1c41c5405f324eaf4dfa1dc43f_min.png",
+    "observaciones": "",
+    "fotoUrl": "https://www.sevilla.org/ConsultasWeb/Docs/69c1ef1a5f963f2150e4c12826d3eb9e_min.png",
     "estado": "adoptado"
   },
   {
@@ -2898,17 +2828,17 @@
     "estado": "adoptado"
   },
   {
-    "id": "sevilla_2025_3555_adoptado",
-    "referencia": "2025/3555",
-    "nombre": "Animal 2025/3555",
-    "especie": "Perro",
-    "raza": "Cruzado",
-    "sexo": "Hembra",
+    "id": "sevilla_2026_127_adoptado",
+    "referencia": "2026/127",
+    "nombre": "Ref: 2026/127",
+    "especie": "Gato",
+    "raza": "Comun",
+    "sexo": "Macho",
     "color": "",
     "chip": "",
     "fecha": "2026-03-19",
-    "observaciones": "",
-    "fotoUrl": "https://www.sevilla.org/ConsultasWeb/Docs/69c1ef1a5f963f2150e4c12826d3eb9e_min.png",
+    "observaciones": "GATO MACHO",
+    "fotoUrl": "https://www.sevilla.org/ConsultasWeb/Docs/a73e8f1c41c5405f324eaf4dfa1dc43f_min.png",
     "estado": "adoptado"
   },
   {
@@ -2965,20 +2895,6 @@
     "fecha": "2026-03-13",
     "observaciones": "PERRO HEMBRA MESTIZO BLANCO-MARRON",
     "fotoUrl": "https://www.sevilla.org/ConsultasWeb/Docs/8409f202437b214f548e41361228ea61_min.png",
-    "estado": "adoptado"
-  },
-  {
-    "id": "sevilla_2026_118_adoptado",
-    "referencia": "2026/118",
-    "nombre": "Ref: 2026/118",
-    "especie": "Perro",
-    "raza": "Mestizo",
-    "sexo": "Hembra",
-    "color": "",
-    "chip": "",
-    "fecha": "2026-03-12",
-    "observaciones": "PERRO HEMBRA MESTIZO COLOR MARRON",
-    "fotoUrl": "https://www.sevilla.org/ConsultasWeb/Docs/dfdd87e7ea21e12e78432a671ebe0dbc_min.png",
     "estado": "adoptado"
   }
 ]
