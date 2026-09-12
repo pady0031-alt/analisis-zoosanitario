@@ -1144,14 +1144,14 @@ class ZoosanitarioApp {
         html += `
           <div class="comparison-card fade-in" style="border-left: 4px solid #f59e0b;">
             <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 0.5rem;">
-              <span class="badge" style="background: #fef3c7; color: #b45309; border: 1px solid #f59e0b; font-weight: 600;">
+              <span class="badge" style="background: #fef3c7; color: #b45309; border: 1px solid #f59e0b; font-weight: 600; white-space: normal; text-align: left; max-width: 100%;">
                 ⏰ Lleva ${dias} días en el centro (Ingreso: ${this.formatDate(animal.fecha)})
               </span>
             </div>
 
-            <div style="display: flex; gap: 1.25rem; align-items: flex-start; margin-top: 0.75rem;">
+            <div style="display: flex; gap: 1.25rem; align-items: flex-start; margin-top: 0.75rem; min-width: 0;">
               ${img}
-              <div style="flex: 1; min-width: 0;">
+              <div style="flex: 1; min-width: 0; overflow-wrap: break-word;">
                 <div style="font-size: 1.05rem; font-weight: 700; margin-bottom: 0.25rem;">${animal.nombre}</div>
                 <div style="font-size: 0.85rem; color: var(--color-text-secondary); margin-bottom: 0.5rem;">
                   <strong>${animal.especie}</strong> • ${animal.raza} • <strong>${animal.sexo}</strong> • Chip: ${animal.chip || 'No especificado'}
