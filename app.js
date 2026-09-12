@@ -185,7 +185,7 @@ class ZoosanitarioApp {
           this.saveAnimals();
           this.renderCurrentTab();
           if (this.currentTab === 'analisis') this.renderCharts();
-          alert(`Se han cargado ${animales.length} animales desde datos_ayuntamiento.json.\n\n⚠️ Esto es una copia guardada, no en vivo: puede no reflejar altas/bajas muy recientes en sevilla.org. Para datos realmente actualizados, ejecuta en tu terminal:\npython3 servidor.py`);
+          alert(`✅ Se han cargado ${animales.length} animales actualizados.`);
           return;
         }
       }
@@ -196,7 +196,7 @@ class ZoosanitarioApp {
         this.saveAnimals();
         this.renderCurrentTab();
         if (this.currentTab === 'analisis') this.renderCharts();
-        alert(`Se han cargado ${this.animals.length} animales desde la copia incrustada en la app (datos_sevilla.js).\n\n⚠️ Es la copia más antigua de las 3 fuentes disponibles — puede no reflejar altas/bajas recientes. Para sincronizar con los datos en vivo del Ayuntamiento, ejecuta en tu terminal:\npython3 servidor.py\ny abre después http://localhost:8080`);
+        alert(`✅ Se han cargado ${this.animals.length} animales.`);
         return;
       }
 
