@@ -368,40 +368,16 @@
       <!-- Tab: Contacto -->
       <div class="tab-pane" id="tab-contacto" role="tabpanel">
         <div class="comparison-panel contact-panel">
-          <h2 class="section-title" style="margin-top: 0;">Contacto</h2>
-          <p style="color: var(--color-text-secondary); margin-bottom: 1.5rem;">
-            ¿Una duda, una sugerencia o algo que no funciona? Escríbenos y te responderemos.
-          </p>
-
-          <form id="contact-form">
-            <div class="form-group">
-              <label class="form-label" for="contact-nombre">Nombre <span style="font-weight: 400; color: var(--color-text-secondary);">(opcional)</span></label>
-              <input type="text" class="form-input" id="contact-nombre" name="nombre" placeholder="Tu nombre">
-            </div>
-
-            <div class="form-group">
-              <label class="form-label" for="contact-email">Correo electrónico <span style="color: var(--color-danger);">*</span></label>
-              <input type="email" class="form-input" id="contact-email" name="email" placeholder="usuario@ejemplo.com" required>
-            </div>
-
-            <div class="form-group">
-              <label class="form-label" for="contact-mensaje">Mensaje <span style="color: var(--color-danger);">*</span></label>
-              <textarea class="form-input" id="contact-mensaje" name="mensaje" rows="6" placeholder="Cuéntanos en qué podemos ayudarte" required></textarea>
-            </div>
-
-            <div class="form-group" style="flex-direction: row; align-items: flex-start; gap: 0.6rem;">
-              <input type="checkbox" id="contact-privacidad" name="privacidad" required style="margin-top: 0.2rem; accent-color: var(--color-primary);">
-              <label class="form-label" for="contact-privacidad" style="font-weight: 600;">He leído y acepto la política de privacidad.</label>
-            </div>
-
-            <p style="font-size: 0.82rem; color: var(--color-text-secondary); margin-bottom: 1.25rem;">
-              <span style="color: var(--color-danger); font-weight: 700;">*</span> Campos obligatorios
-            </p>
-
-            <div id="contact-status" role="status" aria-live="polite" style="display: none; margin-bottom: 1rem; padding: 0.75rem 1rem; border-radius: var(--radius-sm); font-size: 0.88rem;"></div>
-
-            <button type="submit" class="btn btn--primary" id="contact-submit" style="width: 100%; padding: 0.85rem;">Enviar mensaje</button>
-          </form>
+          <div class="google-form-embed">
+            <iframe
+              src="https://docs.google.com/forms/d/e/1FAIpQLSewJQBO3rRxfFhpPTGGLkuRQaacfMfNeryfpe8DwiC-S5enhQ/viewform?embedded=true"
+              title="Formulario de contacto"
+              frameborder="0"
+              marginheight="0"
+              marginwidth="0">
+              Cargando…
+            </iframe>
+          </div>
         </div>
       </div>
 

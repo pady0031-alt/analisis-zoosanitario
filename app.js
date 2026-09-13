@@ -70,60 +70,7 @@ class ZoosanitarioApp {
     this.updateSummary();
     this.populateFilterOptions();
     this.markInitialSortIndicators();
-    this.setupContactForm();
     this.renderTable('perdidos');
-  }
-
-  // --- Formulario de Contacto ---
-  // Envía el mensaje mediante Formspree (servicio gratuito para recibir
-  // formularios en webs estáticas, sin necesidad de servidor propio).
-  //
-  // ⚠️ IMPRESCINDIBLE: sustituye 'TU_ID_DE_FORMSPREE' por el ID real de tu
-  // formulario. Se consigue gratis en https://formspree.io — crea una
-  // cuenta, "New Form", y copia el ID que aparece en la URL que te dan
-  // (algo como https://formspree.io/f/xyzabcde → el ID es "xyzabcde").
-  setupContactForm() {
-    const form = document.getElementById('contact-form');
-    if (!form) return;
-
-    const FORM_ENDPOINT = 'https://formspree.io/f/TU_ID_DE_FORMSPREE';
-
-    form.addEventListener('submit', async (e) => {
-      e.preventDefault();
-      const statusEl = document.getElementById('contact-status');
-      const submitBtn = document.getElementById('contact-submit');
-
-      statusEl.style.display = 'none';
-      submitBtn.disabled = true;
-      const textoOriginal = submitBtn.textContent;
-      submitBtn.textContent = 'Enviando...';
-
-      try {
-        const res = await fetch(FORM_ENDPOINT, {
-          method: 'POST',
-          headers: { 'Accept': 'application/json' },
-          body: new FormData(form)
-        });
-
-        if (!res.ok) throw new Error('Respuesta no válida');
-
-        statusEl.textContent = '✅ Mensaje enviado. ¡Gracias! Te responderemos lo antes posible.';
-        statusEl.style.background = '#e8f5e9';
-        statusEl.style.color = '#2e7d32';
-        statusEl.style.border = '1px solid #a5d6a7';
-        statusEl.style.display = 'block';
-        form.reset();
-      } catch (err) {
-        statusEl.textContent = '⚠️ No se pudo enviar el mensaje. Inténtalo de nuevo en unos minutos.';
-        statusEl.style.background = '#fff3e0';
-        statusEl.style.color = '#b45309';
-        statusEl.style.border = '1px solid #f5c877';
-        statusEl.style.display = 'block';
-      } finally {
-        submitBtn.disabled = false;
-        submitBtn.textContent = textoOriginal;
-      }
-    });
   }
 
   // Marca visualmente la columna "Fecha" como orden activo (↓ más reciente
