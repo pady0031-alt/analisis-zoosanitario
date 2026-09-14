@@ -616,20 +616,6 @@
     "estado": "adoptable"
   },
   {
-    "id": "sevilla_2024_4173_adoptable",
-    "referencia": "2024/4173",
-    "nombre": "Ref: 2024/4173",
-    "especie": "Perro",
-    "raza": "Pit Bull",
-    "sexo": "Hembra",
-    "color": "",
-    "chip": "",
-    "fecha": "2024-11-25",
-    "observaciones": "Edad: 7 MESES | BUEN CARACTER , ACTIVA",
-    "fotoUrl": "https://www.sevilla.org/ConsultasWeb/Docs/010a09bf75606341a53199b86af238e5_min.png",
-    "estado": "adoptable"
-  },
-  {
     "id": "sevilla_2024_4174_adoptable",
     "referencia": "2024/4174",
     "nombre": "Ref: 2024/4174",
@@ -641,6 +627,20 @@
     "fecha": "2024-11-25",
     "observaciones": "Edad: 8 MESES | BUEN CARACTER Y ACTIVO",
     "fotoUrl": "https://www.sevilla.org/ConsultasWeb/Docs/34afc7c162e431c79c97c5451337fa8f_min.png",
+    "estado": "adoptable"
+  },
+  {
+    "id": "sevilla_2024_4173_adoptable",
+    "referencia": "2024/4173",
+    "nombre": "Ref: 2024/4173",
+    "especie": "Perro",
+    "raza": "Pit Bull",
+    "sexo": "Hembra",
+    "color": "",
+    "chip": "",
+    "fecha": "2024-11-25",
+    "observaciones": "Edad: 7 MESES | BUEN CARACTER , ACTIVA",
+    "fotoUrl": "https://www.sevilla.org/ConsultasWeb/Docs/010a09bf75606341a53199b86af238e5_min.png",
     "estado": "adoptable"
   },
   {
@@ -921,48 +921,6 @@
     "fecha": "2026-09-07",
     "observaciones": "",
     "fotoUrl": "https://www.sevilla.org/ConsultasWeb/Docs/e0252dbb5c145c11fc2a711b15a8cacd_min.png",
-    "estado": "adoptable"
-  },
-  {
-    "id": "sevilla_2026_690_adoptable",
-    "referencia": "2026/690",
-    "nombre": "Animal 2026/690",
-    "especie": "Perro",
-    "raza": "Pastor Belga Malinois",
-    "sexo": "Desconocido",
-    "color": "",
-    "chip": "",
-    "fecha": "2026-09-07",
-    "observaciones": "",
-    "fotoUrl": "https://www.sevilla.org/ConsultasWeb/Docs/4ce89e5d2c133ab1518d6fec14fc5f7c_min.png",
-    "estado": "adoptable"
-  },
-  {
-    "id": "sevilla_2026_685_adoptable",
-    "referencia": "2026/685",
-    "nombre": "Animal 2026/685",
-    "especie": "Perro",
-    "raza": "Pastor Belga Malinois",
-    "sexo": "Desconocido",
-    "color": "",
-    "chip": "",
-    "fecha": "2026-09-07",
-    "observaciones": "",
-    "fotoUrl": "https://www.sevilla.org/ConsultasWeb/Docs/06271206b22a999d8a3eb57776a71eb4_min.png",
-    "estado": "adoptable"
-  },
-  {
-    "id": "sevilla_2026_689_adoptable",
-    "referencia": "2026/689",
-    "nombre": "Animal 2026/689",
-    "especie": "Perro",
-    "raza": "Pastor Belga Malinois",
-    "sexo": "Desconocido",
-    "color": "",
-    "chip": "",
-    "fecha": "2026-09-07",
-    "observaciones": "",
-    "fotoUrl": "https://www.sevilla.org/ConsultasWeb/Docs/1a5674c307ac811d44ffb3cd3b7f1861_min.png",
     "estado": "adoptable"
   },
   {
