@@ -2716,20 +2716,6 @@
     "estado": "adoptado"
   },
   {
-    "id": "sevilla_2026_67_adoptado",
-    "referencia": "2026/67",
-    "nombre": "Animal 2026/67",
-    "especie": "Perro",
-    "raza": "Cruzado",
-    "sexo": "Hembra",
-    "color": "",
-    "chip": "",
-    "fecha": "2026-04-02",
-    "observaciones": "",
-    "fotoUrl": "https://www.sevilla.org/ConsultasWeb/Docs/6d03a20735fe244efed2e25319165677_min.png",
-    "estado": "adoptado"
-  },
-  {
     "id": "sevilla_2026_96_adoptado",
     "referencia": "2026/96",
     "nombre": "Animal 2026/96",
@@ -2755,6 +2741,20 @@
     "fecha": "2026-04-02",
     "observaciones": "",
     "fotoUrl": "https://www.sevilla.org/ConsultasWeb/Docs/a6d5e7220468aa29084a32d33c2da571_min.png",
+    "estado": "adoptado"
+  },
+  {
+    "id": "sevilla_2026_67_adoptado",
+    "referencia": "2026/67",
+    "nombre": "Animal 2026/67",
+    "especie": "Perro",
+    "raza": "Cruzado",
+    "sexo": "Hembra",
+    "color": "",
+    "chip": "",
+    "fecha": "2026-04-02",
+    "observaciones": "",
+    "fotoUrl": "https://www.sevilla.org/ConsultasWeb/Docs/6d03a20735fe244efed2e25319165677_min.png",
     "estado": "adoptado"
   },
   {
@@ -2800,6 +2800,20 @@
     "estado": "adoptado"
   },
   {
+    "id": "sevilla_2026_111_adoptado",
+    "referencia": "2026/111",
+    "nombre": "Ref: 2026/111",
+    "especie": "Gato",
+    "raza": "Gato Vulgar",
+    "sexo": "Desconocido",
+    "color": "Blanco",
+    "chip": "",
+    "fecha": "2026-03-19",
+    "observaciones": "GATO COMÚN BLANCO DEPOSITADO EN JAULA 11",
+    "fotoUrl": "https://www.sevilla.org/ConsultasWeb/Docs/9ed074fb43d1d4cc6c58f0c890665caa_min.png",
+    "estado": "adoptado"
+  },
+  {
     "id": "sevilla_2026_127_adoptado",
     "referencia": "2026/127",
     "nombre": "Ref: 2026/127",
@@ -2828,20 +2842,6 @@
     "estado": "adoptado"
   },
   {
-    "id": "sevilla_2026_111_adoptado",
-    "referencia": "2026/111",
-    "nombre": "Ref: 2026/111",
-    "especie": "Gato",
-    "raza": "Gato Vulgar",
-    "sexo": "Desconocido",
-    "color": "Blanco",
-    "chip": "",
-    "fecha": "2026-03-19",
-    "observaciones": "GATO COMÚN BLANCO DEPOSITADO EN JAULA 11",
-    "fotoUrl": "https://www.sevilla.org/ConsultasWeb/Docs/9ed074fb43d1d4cc6c58f0c890665caa_min.png",
-    "estado": "adoptado"
-  },
-  {
     "id": "sevilla_2026_77_adoptado",
     "referencia": "2026/77",
     "nombre": "Animal 2026/77",
@@ -2853,20 +2853,6 @@
     "fecha": "2026-03-17",
     "observaciones": "",
     "fotoUrl": "https://www.sevilla.org/ConsultasWeb/Docs/ed0e064c7e8b0b288cd3b85b991bafb4_min.png",
-    "estado": "adoptado"
-  },
-  {
-    "id": "sevilla_2026_108_adoptado",
-    "referencia": "2026/108",
-    "nombre": "Animal 2026/108",
-    "especie": "Perro",
-    "raza": "Cruzado",
-    "sexo": "Macho",
-    "color": "",
-    "chip": "",
-    "fecha": "2026-03-16",
-    "observaciones": "",
-    "fotoUrl": "https://www.sevilla.org/ConsultasWeb/Docs/f1abf095265dad6a12204639f24c8e99_min.png",
     "estado": "adoptado"
   }
 ]
