@@ -658,20 +658,6 @@
     "estado": "adoptable"
   },
   {
-    "id": "sevilla_2024_4174_adoptable",
-    "referencia": "2024/4174",
-    "nombre": "Ref: 2024/4174",
-    "especie": "Perro",
-    "raza": "Pit Bull",
-    "sexo": "Macho",
-    "color": "",
-    "chip": "",
-    "fecha": "2024-11-25",
-    "observaciones": "Edad: 8 MESES | BUEN CARACTER Y ACTIVO",
-    "fotoUrl": "https://www.sevilla.org/ConsultasWeb/Docs/34afc7c162e431c79c97c5451337fa8f_min.png",
-    "estado": "adoptable"
-  },
-  {
     "id": "sevilla_2024_4173_adoptable",
     "referencia": "2024/4173",
     "nombre": "Ref: 2024/4173",
@@ -683,6 +669,20 @@
     "fecha": "2024-11-25",
     "observaciones": "Edad: 7 MESES | BUEN CARACTER , ACTIVA",
     "fotoUrl": "https://www.sevilla.org/ConsultasWeb/Docs/010a09bf75606341a53199b86af238e5_min.png",
+    "estado": "adoptable"
+  },
+  {
+    "id": "sevilla_2024_4174_adoptable",
+    "referencia": "2024/4174",
+    "nombre": "Ref: 2024/4174",
+    "especie": "Perro",
+    "raza": "Pit Bull",
+    "sexo": "Macho",
+    "color": "",
+    "chip": "",
+    "fecha": "2024-11-25",
+    "observaciones": "Edad: 8 MESES | BUEN CARACTER Y ACTIVO",
+    "fotoUrl": "https://www.sevilla.org/ConsultasWeb/Docs/34afc7c162e431c79c97c5451337fa8f_min.png",
     "estado": "adoptable"
   },
   {
@@ -756,20 +756,6 @@
     "estado": "adoptable"
   },
   {
-    "id": "sevilla_2025_2310_adoptable",
-    "referencia": "2025/2310",
-    "nombre": "Ref: 2025/2310",
-    "especie": "Perro",
-    "raza": "American Bully",
-    "sexo": "Macho",
-    "color": "",
-    "chip": "",
-    "fecha": "2025-06-09",
-    "observaciones": "ANIMAL RESCATADO.",
-    "fotoUrl": "https://www.sevilla.org/ConsultasWeb/Docs/9fdf4ee6ffec242295f613a0420f8d2b_min.png",
-    "estado": "adoptable"
-  },
-  {
     "id": "sevilla_2025_2312_adoptable",
     "referencia": "2025/2312",
     "nombre": "Animal 2025/2312",
@@ -781,6 +767,20 @@
     "fecha": "2025-06-09",
     "observaciones": "",
     "fotoUrl": "https://www.sevilla.org/ConsultasWeb/Docs/e825a4dd678d92a77b23b55616263bb2_min.png",
+    "estado": "adoptable"
+  },
+  {
+    "id": "sevilla_2025_2310_adoptable",
+    "referencia": "2025/2310",
+    "nombre": "Ref: 2025/2310",
+    "especie": "Perro",
+    "raza": "American Bully",
+    "sexo": "Macho",
+    "color": "",
+    "chip": "",
+    "fecha": "2025-06-09",
+    "observaciones": "ANIMAL RESCATADO.",
+    "fotoUrl": "https://www.sevilla.org/ConsultasWeb/Docs/9fdf4ee6ffec242295f613a0420f8d2b_min.png",
     "estado": "adoptable"
   },
   {
@@ -952,20 +952,6 @@
     "estado": "adoptable"
   },
   {
-    "id": "sevilla_2026_688_adoptable",
-    "referencia": "2026/688",
-    "nombre": "Animal 2026/688",
-    "especie": "Perro",
-    "raza": "Pastor Belga Malinois",
-    "sexo": "Desconocido",
-    "color": "",
-    "chip": "",
-    "fecha": "2026-09-07",
-    "observaciones": "",
-    "fotoUrl": "https://www.sevilla.org/ConsultasWeb/Docs/e0252dbb5c145c11fc2a711b15a8cacd_min.png",
-    "estado": "adoptable"
-  },
-  {
     "id": "sevilla_2026_694_adoptable",
     "referencia": "2026/694",
     "nombre": "Ref: 2026/694",
@@ -991,6 +977,20 @@
     "fecha": "2026-09-11",
     "observaciones": "",
     "fotoUrl": "https://www.sevilla.org/ConsultasWeb/Docs/52c1fdc27460bd5d25c62cd2b931e40c_min.png",
+    "estado": "adoptado"
+  },
+  {
+    "id": "sevilla_2025_3161_adoptado",
+    "referencia": "2025/3161",
+    "nombre": "Animal 2025/3161",
+    "especie": "Perro",
+    "raza": "Mestizo",
+    "sexo": "Macho",
+    "color": "",
+    "chip": "",
+    "fecha": "2026-09-11",
+    "observaciones": "",
+    "fotoUrl": "https://www.sevilla.org/ConsultasWeb/Docs/3318e509312eeb11e4ef431e513c377b_min.png",
     "estado": "adoptado"
   },
   {
