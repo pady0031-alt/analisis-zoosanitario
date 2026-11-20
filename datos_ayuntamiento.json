@@ -1,16 +1,30 @@
 [
   {
-    "id": "sevilla_2026_912_perdido",
-    "referencia": "2026/912",
-    "nombre": "Ref: 2026/912",
+    "id": "sevilla_2026_923_perdido",
+    "referencia": "2026/923",
+    "nombre": "Ref: 2026/923",
+    "especie": "Perro",
+    "raza": "Cocker",
+    "sexo": "Macho",
+    "color": "",
+    "chip": "",
+    "fecha": "2026-11-20",
+    "observaciones": "PERRO MACHO",
+    "fotoUrl": "https://www.sevilla.org/ConsultasWeb/Docs/0560e46ed5678c12dc4e003311d87842_min.png",
+    "estado": "perdido"
+  },
+  {
+    "id": "sevilla_2026_922_perdido",
+    "referencia": "2026/922",
+    "nombre": "Ref: 2026/922",
     "especie": "Perro",
     "raza": "Podenco",
     "sexo": "Macho",
     "color": "",
     "chip": "",
-    "fecha": "2026-11-16",
-    "observaciones": "PERRO MACHO PODENCO",
-    "fotoUrl": "https://www.sevilla.org/ConsultasWeb/Docs/584cc08c5c87ed523011e9f17cfb30ba_min.png",
+    "fecha": "2026-11-19",
+    "observaciones": "PERRO MACHO",
+    "fotoUrl": "https://www.sevilla.org/ConsultasWeb/Docs/9f1b2c9c0454585bdd0ad12e9c0cf4ef_min.png",
     "estado": "perdido"
   },
   {
