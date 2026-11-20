@@ -3318,20 +3318,6 @@
     "estado": "adoptado"
   },
   {
-    "id": "sevilla_2026_277_adoptado",
-    "referencia": "2026/277",
-    "nombre": "Ref: 2026/277",
-    "especie": "Perro",
-    "raza": "Bodeguero",
-    "sexo": "Macho",
-    "color": "",
-    "chip": "",
-    "fecha": "2026-05-29",
-    "observaciones": "PERRO MACHO CACHORRO MANCHA NEGRA EN UN OJO",
-    "fotoUrl": "https://www.sevilla.org/ConsultasWeb/Docs/7d430f3f2ef6eb9072b52a46b261b4d0_min.png",
-    "estado": "adoptado"
-  },
-  {
     "id": "sevilla_2026_213_adoptado",
     "referencia": "2026/213",
     "nombre": "Ref: 2026/213",
@@ -3346,17 +3332,17 @@
     "estado": "adoptado"
   },
   {
-    "id": "sevilla_2026_245_adoptado",
-    "referencia": "2026/245",
-    "nombre": "Ref: 2026/245",
+    "id": "sevilla_2026_277_adoptado",
+    "referencia": "2026/277",
+    "nombre": "Ref: 2026/277",
     "especie": "Perro",
-    "raza": "Mestizo",
-    "sexo": "Desconocido",
+    "raza": "Bodeguero",
+    "sexo": "Macho",
     "color": "",
     "chip": "",
-    "fecha": "2026-05-21",
-    "observaciones": "PERRO MACHO GATERA 10",
-    "fotoUrl": "https://www.sevilla.org/ConsultasWeb/Docs/bab9c70d2d3e25210f1659820009b4f2_min.png",
+    "fecha": "2026-05-29",
+    "observaciones": "PERRO MACHO CACHORRO MANCHA NEGRA EN UN OJO",
+    "fotoUrl": "https://www.sevilla.org/ConsultasWeb/Docs/7d430f3f2ef6eb9072b52a46b261b4d0_min.png",
     "estado": "adoptado"
   }
 ]
